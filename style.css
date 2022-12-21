@@ -1,0 +1,29 @@
+.navbar-brand {
+    font-weight: 500;
+   
+}
+
+*{
+    font-family: Roboto;
+}
+h1 {
+    font-family: Unbounded;
+    font-size: 30px;
+    color: #1B1952;
+}
+#home {
+    margin-top: -80px;
+    padding-top: 80px;
+    position: relative;
+    background: url(./img-resources/Vector.png);
+    background-position: bottom;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 130vh;
+    background-repeat: no-repeat;
+}
+
+.btn-primary{
+    background-color: #1B1952 !important;
+    border-color: #1B1952;
+}
