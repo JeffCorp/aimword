@@ -27,3 +27,9 @@ h1 {
     background-color: #1B1952 !important;
     border-color: #1B1952;
 }
+.bg-light  {
+    background-color: #D1D1D1 !important;
+}
+.text-primary {
+    color: #1B1952 !important;
+}
