@@ -28,8 +28,22 @@ h1 {
     border-color: #1B1952;
 }
 .bg-light  {
-    background-color: #D1D1D1 !important;
+    background-color: white !important;
+}
+.bg-primary{
+    background-color: #1B1952 !important;
 }
 .text-primary {
     color: #1B1952 !important;
+}
+.card-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.bg-secondary {
+    color: bisque !important;
+}
+.text-container {
+    margin-right: 10px;
 }
