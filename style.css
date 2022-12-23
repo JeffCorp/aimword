@@ -15,7 +15,7 @@ h1 {
     margin-top: -80px;
     padding-top: 80px;
     position: relative;
-    background: url(./img-resources/Vector.png);
+    background: url(./img-resources/Vector2.png);
     background-position: bottom;
     background-size: cover;
     /* background-attachment: fixed; */
@@ -40,10 +40,24 @@ h1 {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    
 }
 .bg-secondary {
     color: bisque !important;
 }
 .text-container {
     margin-right: 10px;
+}
+.bg-primary2 {
+    background-color: rgba(27, 25, 82, 0.92);
+}
+.text-justify{
+    text-align: justify;
+
+}
+h2 {
+    font-size: 40px;
+}
+.img-fluid {
+    object-fit: contain;
 }
