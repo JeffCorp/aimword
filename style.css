@@ -61,3 +61,24 @@ h2 {
 .img-fluid {
     object-fit: contain;
 }
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+#about-us::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+#contact-us::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+#our-services::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+.text-secondary {
+    color: #5E5E5E !important;
+}
