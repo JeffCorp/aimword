@@ -29,6 +29,27 @@
 </head>
 
 <body>
+  <script>
+    const { href } = window.location;
+
+    window.addEventListener("load", (e) => {
+      for (let i = 0; i < 4; i++) {
+        if (href.endsWith(document?.getElementsByClassName("nav-link").item(i).getAttribute("href"))) {
+          document.getElementsByClassName("nav-link").item(i).classList.add("active");
+        }
+      }
+    });
+
+    function setActive(id) {
+      for (let i = 0; i < 4; i++) {
+        if (id !== i) {
+          document.getElementsByClassName("nav-link").item(i).classList.remove("active")
+        } else {
+          document.getElementsByClassName("nav-link").item(i).classList.add("active")
+        }
+      }
+    }
+  </script>
   <!-- Navbar -->
   <section id="#navigation">
     <nav class="navbar navbar-dark bg-primary2 navbar-expand-md border-1 border-bottom border-primary px-3 fixed-top">
@@ -41,22 +62,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#our-services">Our services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about-us">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact-us">Contact us</a>
-            </li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="nav-home" onclick="setActive(0)" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-our-services" onclick="setActive(1)" href="#our-services">Our services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-about-us" onclick="setActive(2)" href="#about-us">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-contact-us" onclick="setActive(3)" href="#contact-us">Contact us</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </section>
@@ -283,13 +303,6 @@
         </div>
       </div>
   </section>
-
-
-
-
-
-
-
 
   <script>
     (function (w, d, u) {
