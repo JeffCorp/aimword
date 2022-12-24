@@ -29,6 +29,27 @@
 </head>
 
 <body>
+  <script>
+    const { href } = window.location;
+
+    window.addEventListener("load", (e) => {
+      for (let i = 0; i < 4; i++) {
+        if (href.endsWith(document?.getElementsByClassName("nav-link").item(i).getAttribute("href"))) {
+          document.getElementsByClassName("nav-link").item(i).classList.add("active");
+        }
+      }
+    });
+
+    function setActive(id) {
+      for (let i = 0; i < 4; i++) {
+        if (id !== i) {
+          document.getElementsByClassName("nav-link").item(i).classList.remove("active")
+        } else {
+          document.getElementsByClassName("nav-link").item(i).classList.add("active")
+        }
+      }
+    }
+  </script>
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-primary2 navbar-expand-md border-1 border-bottom border-primary px-3 fixed-top">
     <div class="container-fluid">
@@ -43,16 +64,16 @@
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" id="nav-home" onclick="setActive(0)" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#our-services">Our services</a>
+            <a class="nav-link" id="nav-our-services" onclick="setActive(1)" href="#our-services">Our services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about-us">About us</a>
+            <a class="nav-link" id="nav-about-us" onclick="setActive(2)" href="#about-us">About us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact-us">Contact us</a>
+            <a class="nav-link" id="nav-contact-us" onclick="setActive(3)" href="#contact-us">Contact us</a>
           </li>
         </ul>
       </div>
@@ -109,8 +130,10 @@
         <div class="text-container">
           <h3 class="text-secondary fw-bold">Mobile App</h3>
           <p class="text-dark pt-3 text-justify lead">
-            We created a mobile application that improves Catholics' spirituality by compiling a list of daily devotionals, 
-            short prayers, daily mass readings, and much more. The mobile application is available in both Android and iOS 
+            We created a mobile application that improves Catholics' spirituality by compiling a list of daily
+            devotionals,
+            short prayers, daily mass readings, and much more. The mobile application is available in both Android and
+            iOS
             versions on the Play Store and App Store. You could use the links provided below.
           </p>
           <p class="text-primary fw-bold"> Download from</p>
@@ -144,8 +167,8 @@
         <div class="text-container">
           <h3 class="text-secondary fw-bold"> Affiliate Marketing</h3>
           <p class="text-dark pt-3 text-justify lead">
-            We at Abide In My Word recognize that spirituality is only a small portion of a person's overall experience, 
-            so we made the decision to reward you for using the mobile app and introducing it to others. 
+            We at Abide In My Word recognize that spirituality is only a small portion of a person's overall experience,
+            so we made the decision to reward you for using the mobile app and introducing it to others.
             Your referral code helps to make this possible.
             Please see the information below.
           </p>
@@ -277,16 +300,12 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="col-md-6">
-          <script data-b24-form="inline/10/poif8u" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn.bitrix24.com/b23977087/crm/form/loader_10.js');</script>
+          <script data-b24-form="inline/10/poif8u"
+            data-skip-moving="true">(function (w, d, u) { var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 180000 | 0); var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h); })(window, document, 'https://cdn.bitrix24.com/b23977087/crm/form/loader_10.js');</script>
         </div>
       </div>
 
   </section>
-
-
-
-
-
 
 
   <script>
